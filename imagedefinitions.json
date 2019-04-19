@@ -1,0 +1,6 @@
+[
+    {
+        "name": "spring-boot",
+        "imageUri": "063343042437.dkr.ecr.us-east-1.amazonaws.com/cma-demo-ecr:spring-boot"
+    }
+]
