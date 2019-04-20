@@ -1,0 +1,14 @@
+docker build and run
+
+1. mvn package
+2. sudo docker build -f src/main/docker/Dockerfile -t spring-boot .
+3. check images: docker images
+4. run -p 8080:8080 spring-boot
+
+Build and Push into AWS ECR
+
+1. docker build -f src/main/docker/Dockerfile -t 063343042437.dkr.ecr.us-east-1.amazonaws.com/cma-demo-ecr:spring-boot
+2. to login : eval "$(aws ecr get-login --no-include-email)"
+3. docker push 063343042437.dkr.ecr.us-east-1.amazonaws.com/cma-demo-ecr:spring-boot
+
+
