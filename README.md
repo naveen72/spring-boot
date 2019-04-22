@@ -22,6 +22,8 @@ $(aws ecr get-login --no-include-email --region us-west-1)
  docker push 016973021151.dkr.ecr.us-east-2.amazonaws.com/ecrungerw:spring-boot 
  docker push 0169....us-west-1.amazonaws.com/ecs-example-repository:spring-boot
  docker push 016973021151.dkr.ecr.us-west-1.amazonaws.com/ecs-example-repository:spring-boot
+ 
+ 
 
 
   
