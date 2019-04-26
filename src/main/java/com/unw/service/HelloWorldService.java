@@ -16,7 +16,7 @@ public class HelloWorldService {
     @GET
     @Path("/hello")
     public Response test() {
-        return Response.status(200).entity("Index Page , Date 25.04.2019 - welcome to CMA").build();
+        return Response.status(200).entity("HOME Page , Date 25.04.2019 - welcome to CMA").build();
     }
 
 }
