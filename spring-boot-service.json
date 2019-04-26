@@ -1,0 +1,22 @@
+{
+   "kind":"Service",
+   "apiVersion":"v1",
+   "metadata":{
+      "name":"spring-boot",
+      "labels":{
+         "app":"spring-boot"
+      }
+   },
+   "spec":{
+      "ports": [
+         {
+           "port":8080,
+           "targetPort":"http-server"
+         }
+      ],
+      "selector":{
+         "app":"spring-boot"
+      },
+      "type": "LoadBalancer"
+   }
+}

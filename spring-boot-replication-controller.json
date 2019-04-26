@@ -1,0 +1,39 @@
+{
+   "kind":"ReplicationController",
+   "apiVersion":"v1",
+   "metadata":{
+      "name":"spring-boot",
+      "labels":{
+         "app":"spring-boot"
+      }
+   },
+   "spec":{
+      "replicas":3,
+      "selector":{
+         "app":"spring-boot"
+      },
+      "template":{
+         "metadata":{
+            "labels":{
+               "app":"spring-boot"
+            }
+         },
+         "spec":{
+            "containers":[
+               {
+                  "name":"spring-boot",
+                  "image":"063343042437.dkr.ecr.us-east-1.amazonaws.com/cma-demo-ecr:latest",
+		  "ports":[
+                     {
+                        "name":"http-server",
+                        "containerPort":8080
+                     }
+                  ],
+		  "imagePullPolicy": "Always"
+               }
+            ],
+	    "restartPolicy": "Always"
+         }
+      }
+   }
+}
