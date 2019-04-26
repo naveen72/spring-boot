@@ -2,9 +2,9 @@
    "kind":"Service",
    "apiVersion":"v1",
    "metadata":{
-      "name":"spring-boot-dep",
+      "name":"spring-boot",
       "labels":{
-         "app":"spring-boot-dep"
+         "app":"spring-boot"
       }
    },
    "spec":{
@@ -15,7 +15,7 @@
          }
       ],
       "selector":{
-         "app":"spring-boot-dep"
+         "app":"spring-boot"
       },
       "type": "LoadBalancer"
    }
