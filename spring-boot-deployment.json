@@ -1,0 +1,41 @@
+{
+   "kind":"Deployment",
+   "apiVersion":"apps/v1",
+   "metadata":{
+      "name":"spring-boot-dep",
+      "labels":{
+         "app":"spring-boot-dep"
+      }
+   },
+   "spec":{
+      "replicas":3,
+      "selector":{
+              "matchLabels":{
+                      "app":"spring-boot-dep"
+              }
+      },
+      "template":{
+         "metadata":{
+            "labels":{
+               "app":"spring-boot-dep"
+            }
+         },
+         "spec":{
+            "containers":[
+               {
+                  "name":"spring-boot-dep",
+                  "image":"063343042437.dkr.ecr.us-east-1.amazonaws.com/cma-demo-ecr:latest",
+		  "ports":[
+                     {
+                        "name":"http-server",
+                        "containerPort":8080
+                     }
+                  ],
+		  "imagePullPolicy": "Always"
+               }
+            ],
+	    "restartPolicy": "Always"
+         }
+      }
+   }
+}
