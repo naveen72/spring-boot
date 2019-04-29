@@ -12,11 +12,12 @@ import javax.ws.rs.core.Response;
 @Component
 @Path("/spring-docker/")
 public class HelloWorldService {
+    @Autowired
+    BuildProperties buildProperties;
 
     @GET
     @Path("/hello")
     public Response test() {
-        return Response.status(200).entity("CMA HOME Page , Date 26.04.2019 10:01 AM - welcome to CMA workbench").build();
+        return Response.status(200).entity("CMA HOME Page , Date 26.04.2019 10:01 AM - welcome to CMA workbench project version :: " + 		buildProperties.getVersion()).build();
     }
-
 }
