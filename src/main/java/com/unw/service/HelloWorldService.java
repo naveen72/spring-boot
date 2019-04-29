@@ -5,8 +5,6 @@ import org.springframework.stereotype.Component;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.core.Response;
-import org.springframework.boot.info.BuildProperties;
-import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * @author UNGERW
@@ -14,8 +12,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 @Component
 @Path("/spring-docker/")
 public class HelloWorldService {
-    @Autowired
-    BuildProperties buildProperties;
 
     @GET
     @Path("/hello")
